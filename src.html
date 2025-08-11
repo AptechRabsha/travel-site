@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sort by Countries - Trip Planner</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom, 
+        #ffffff 0%, 
+        #FCEAC5 40%, 
+        #F55D3D 80%, 
+        #0A1A2F 100%);
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+    }
+    .sidebar {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      height: 100vh; /* full height */
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+    .country-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .country-card {
+      transition: transform 0.2s ease;
+      cursor: pointer;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .country-card:hover {
+      transform: scale(1.03);
+    }
+    h5.card-title {
+      color: #F55D3D;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <div class="col-md-3 sidebar">
+      <h5>Sort by</h5>
+      <select class="form-select mb-3">
+        <option selected>Popularity</option>
+        <option>Price (Low to High)</option>
+        <option>Price (High to Low)</option>
+        <option>Name (A-Z)</option>
+      </select>
+
+      <h5>Filter by Country</h5>
+      <select class="form-select">
+        <option selected>All</option>
+        <option>Japan</option>
+        <option>France</option>
+        <option>Pakistan</option>
+      </select>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-md-9 py-4">
+      <div class="row">
+        
+        <!-- Tokyo -->
+        <div class="col-md-4 mb-4">
+          <a href="destination-tokyo.html" class="text-decoration-none text-dark">
+            <div class="card country-card">
+              <img src="https://source.unsplash.com/400x300/?tokyo" alt="Tokyo">
+              <div class="card-body">
+                <h5 class="card-title">Tokyo Tower</h5>
+                <p class="card-text"><strong>Country:</strong> Japan</p>
+                <p class="card-text"><strong>Price:</strong> $1200</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Paris -->
+        <div class="col-md-4 mb-4">
+          <a href="destination-paris.html" class="text-decoration-none text-dark">
+            <div class="card country-card">
+              <img src="https://source.unsplash.com/400x300/?paris" alt="Paris">
+              <div class="card-body">
+                <h5 class="card-title">Eiffel Tower</h5>
+                <p class="card-text"><strong>Country:</strong> France</p>
+                <p class="card-text"><strong>Price:</strong> $1500</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Hunza -->
+        <div class="col-md-4 mb-4">
+          <a href="destination-hunza.html" class="text-decoration-none text-dark">
+            <div class="card country-card">
+              <img src="https://source.unsplash.com/400x300/?hunza" alt="Hunza">
+              <div class="card-body">
+                <h5 class="card-title">Hunza Valley</h5>
+                <p class="card-text"><strong>Country:</strong> Pakistan</p>
+                <p class="card-text"><strong>Price:</strong> $800</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Kyoto -->
+        <div class="col-md-4 mb-4">
+          <a href="destination-kyoto.html" class="text-decoration-none text-dark">
+            <div class="card country-card">
+              <img src="https://source.unsplash.com/400x300/?kyoto" alt="Kyoto">
+              <div class="card-body">
+                <h5 class="card-title">Kyoto Temples</h5>
+                <p class="card-text"><strong>Country:</strong> Japan</p>
+                <p class="card-text"><strong>Price:</strong> $1100</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
